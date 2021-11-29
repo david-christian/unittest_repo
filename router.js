@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const moduleaaa = require("./module")
 
-router.post("/sdkHelper", (req, res) => {
+router.get("/sdkHelper", (req, res) => {
     try {
         moduleaaa.ahoyo((err, result) => {
             if (err) return res.json({ok: 1})

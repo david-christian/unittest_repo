@@ -1,10 +1,9 @@
 var mysql = require('mysql');
 var db = mysql.createConnection({
-  host:'localhost',
-  user: 'nodejs',
-  password: '8TU*#iwEOWziDEkr',
-  port:3306,
-  database: 'KYDB_NEW'
+  host:process.env.host,
+  user: process.env.user,
+  password: process.env.password,
+  database: process.env.database
 });
 
 module.exports = db;
